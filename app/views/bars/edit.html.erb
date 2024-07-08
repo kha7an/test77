@@ -1,0 +1,10 @@
+<h1>Редактирование bar</h1>
+
+<%= render "form", bar: @bar %>
+
+<br>
+
+<div>
+  <%= link_to "просмотр bar", foo_bar_path(@foo, @bar) %> |
+  <%= link_to "назад ко всем bars", foo_bars_path(@foo) %>
+</div>

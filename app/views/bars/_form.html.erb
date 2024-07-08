@@ -1,0 +1,30 @@
+
+<%= form_with(model: [@foo, @bar], local: true) do |form| %>
+  <% if @bar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+
+      <ul>
+        <% @bar.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Название %>
+    <%= form.text_field :name %>
+  </div>
+<br>
+<br>
+  <div class="field">
+    <%= form.label :Описание %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :Обновить %>
+  </div>
+<% end %>
+

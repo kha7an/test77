@@ -1,0 +1,7 @@
+<h1><%= @bar.name %></h1>
+<p><%= @bar.description %></p>
+
+<%= link_to 'Редактирование', edit_foo_bar_path(@foo, @bar) %> |
+<%= link_to 'Назад', foo_bars_path(@foo) %>
+<%= button_to 'удалить', foo_bar_path(@foo, @bar), method: :delete, data: { confirm: 'Вы уверены?' }, class: "btn btn_danger" %>
+
