@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   end
   root "foos#index"
 
-
 end

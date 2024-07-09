@@ -1,7 +1,8 @@
 
 <h1>Bars for <%= @foo.name %></h1>
 
-<%= link_to 'New Bar', new_foo_bar_path(@foo) %>
+<%= button_to 'Создать Bar', new_foo_bar_path, method: :get %>
+
 <table>
   <thead>
   <tr>
@@ -17,7 +18,6 @@
       <td><%= bar.description %></td>
       <td><%= link_to 'Просмотр', foo_bar_path(@foo, bar) %></td>
       <td><%= link_to 'Редактирование', edit_foo_bar_path(@foo, bar) %></td>
-      <td><%= button_to 'удалить', foo_bar_path(@foo, bar), method: :delete, data: { confirm: 'Вы уверены?' } %>
     </tr>
   <% end %>
   </tbody>

@@ -12,17 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.text_field :name %>
-  </div>
+    <%= form.label :Имя %>
+    <br>
+    <%= form.text_area :name %>  </div>
 <br>
 <br>
   <div class="field">
     <%= form.label :Описание %>
+    <br>
     <%= form.text_area :description %>
   </div>
 
   <div class="actions">
-    <%= form.submit :Обновить%>
+    <%= form.submit %>
   </div>
 <% end %>
 

@@ -6,7 +6,7 @@
 <%= button_to 'удалить', @foo, method: :delete, data: { confirm: 'Вы уверены?' } %>
 
 <h2>Bars</h2>
-<%= button_to 'создать Bar', new_foo_bar_path(@foo) %>
+<%= button_to 'создать Bar', new_foo_bar_path(@foo), method: :get %>
 <table>
   <thead>
   <tr>
@@ -22,7 +22,6 @@
       <td><%= bar.description %></td>
       <td><%= link_to 'смотреть', foo_bar_path(@foo, bar) %></td>
       <td><%= link_to 'редактировать', edit_foo_bar_path(@foo, bar) %></td>
-      <td><%= button_to 'удалить', foo_bar_path(@foo, bar), method: :delete, data: { confirm: 'Вы уверены?' } %>
     </tr>
   <% end %>
   </tbody>

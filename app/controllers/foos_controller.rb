@@ -1,4 +1,4 @@
-class FoosController < ApplicationController
+  class FoosController < ApplicationController
   before_action :set_foo, only: %i[ show edit update destroy ]
 
   def index

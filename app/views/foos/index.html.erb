@@ -1,7 +1,7 @@
 
 <h1>Foos</h1>
 
-<%= link_to 'создать foo', new_foo_path %>
+<%= button_to 'создать Foo', new_foo_path, method: :get %>
 <table>
   <thead>
   <tr>
@@ -17,7 +17,6 @@
       <td><%= foo.description %></td>
       <td><%= link_to 'смотреть', foo %></td>
       <td><%= link_to 'редактировать', edit_foo_path(foo) %></td>
-      <td><%= button_to 'удалить', foo, method: :delete, data: { confirm: 'Вы уверены?' } %>
       </td>
     </tr>
   <% end %>
