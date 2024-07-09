@@ -36,7 +36,7 @@ class BarsController < ApplicationController
 
   def destroy
     @bar.destroy
-    redirect_to foo_bars_url(@foo), notice: 'Bar wудален'
+    redirect_to foo_bars_url(@foo), notice: 'Bar удален'
   end
 
   private
