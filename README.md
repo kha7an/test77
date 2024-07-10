@@ -1,24 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Установка и запуск
 
-Things you may want to cover:
+1. **Клонируйте репозиторий:**
 
-* Ruby version
+    ```sh
+    git clone https://github.com/kha7an/test77.git
+    cd tets
+    ```
 
-* System dependencies
+2. **Создайте и запустите контейнеры:**
 
-* Configuration
+    ```sh
+    docker-compose up --build
+    ```
 
-* Database creation
+3. **Создайте и мигрируйте базу данных:**
 
-* Database initialization
+   В новом терминале выполните следующие команды:
 
-* How to run the test suite
+    ```sh
+    docker-compose run web bundle exec rails db:create
+    docker-compose run web bundle exec rails db:migrate
+    docker-compose run web bundle exec rails db:seed
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+4. **Доступ к приложению:**
 
-* Deployment instructions
+   Откройте ваш браузер и перейдите по адресу [http://localhost:3000](http://localhost:3000).
 
-* ...
+
